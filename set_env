@@ -1,0 +1,1 @@
+export IDF_PATH="$(pwd)/ESP8266_RTOS_SDK"

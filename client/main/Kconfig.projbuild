@@ -1,0 +1,53 @@
+menu "Home monitoring client"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default ""
+    help
+        SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default ""
+    help
+        WiFi password (WPA or WPA2) for the example to use.
+
+        Can be left blank if the network has no security set.
+
+config HOST_ADDR
+    string "Server host"
+    default ""
+    help
+		Server host to connnect
+
+config HOST_PORT
+    int "Server port"
+    default "8443"
+    help
+		Server port to connnect
+
+config RETRY_TIMEOUT
+	int "Connect retry timeout"
+	default 1000
+	help
+		Number of milliseconds to wait before reconnecting to the server
+
+config INITIAL_TIME
+    int "Initial timestamp"
+    default "0"
+    help
+		Unix timestamp to use before SNTP is able to obtain system time
+
+config SNTP_HOST
+    string "SNTP host"
+    default "pool.ntp.org"
+    help
+		SNTP host to use to sync time
+
+config DHCP_HOSTNAME 
+    string "DHCP Hostname"
+    default ""
+    help
+		Hostname to use during DHCP
+
+endmenu
